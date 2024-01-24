@@ -1,0 +1,197 @@
+:root {
+  --cyan: 179 62% 43%;
+  --light-gray: 204 43% 93%;
+  --grayish-blue:218 22% 67%;
+  --bright-yellow: 71 73% 54%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+body {
+  min-height: 100dvh;
+  padding: 4rem;
+}
+p {
+  max-width: 62ch;
+  margin-bottom: 2rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+list-style: none;
+}
+
+/* Set core body defaults */
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+text-decoration-skip-ink: auto;
+color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+max-width: 100%;
+display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+scroll-margin-block: 5ex;
+}
+body {
+  color: white;
+  font-family: 'Karla', sans-serif;
+  background-color: hsl(var(--light-gray));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  display: grid;
+  grid-template-areas: 
+  'first' 
+  'second'
+  'third'
+  ;  
+  max-width: 320px;
+  box-shadow: 5px 10px 12px hsl(var(--grayish-blue));
+}
+section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#first {
+  grid-area: first;
+  color: hsl(var(--grayish-blue));
+  background-color: white; 
+}
+#first > h1 {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: hsl(var(--cyan));
+}
+#first > h2 {
+  font-size: 1em;
+  color: hsl(var(--bright-yellow));
+}
+#first > p {
+  font-size: .81em;
+  line-height: 2em;
+}
+#second {
+  grid-area: second;
+  background-color: hsl(var(--cyan));
+}
+.second > h1, #third > h1 {
+  font-size: 1.2em;
+}
+#second > h2 {
+  font-size: 1em;
+  font-weight: 500;
+  color: hsl(var(--light-gray));
+}
+#second > h2 > span {
+  font-size: 2em;
+  font-weight: 900;
+}
+#second > button {
+  cursor: pointer;
+  border: 0;
+  color: white;
+  padding: 1rem 0;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: hsl(var(--bright-yellow));
+}
+#second > button:hover { 
+  color: hsl(var(--bright-yellow));
+  background-color: white;
+  transition: ease-in-out 300ms;
+}
+#third {
+  grid-area: third;
+  background-color: hsl(var(--cyan) / .8);
+}
+#third > div > p {
+  color: hsl(var(--light-gray));
+  font-size: .81em;
+  line-height: 2em;
+}
+
+@media(min-width:768px) {
+  main {
+    max-width: 760px;
+    grid-template-areas: 
+    'first first' 
+    'second third'
+    ;
+  }
+  #second,  #third {
+    width: 380px;
+  }
+  #first h1 {
+    font-size: 2em;
+  }
+  #first h2 {
+    font-size: 1.49em;
+  }
+  #first p {
+    font-size: 1.2em;
+  }
+  #second {
+    justify-content: space-around;
+  }
+  #second > h1, #third > h1 {
+    font-size: 1.7em;
+  }
+  #second h2 {
+    font-size: 1.2em;
+  }
+  #third div p {
+    font-size: 1em;
+  }
+}
