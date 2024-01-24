@@ -2,81 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Single Price Grid Component</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              screens: {
-                mobile: "375px",
-                desktop: "1440px",
-              },
-              colors: {
-                c:" hsl(179, 62%, 39%)",
-                lc: "hsl(179, 62%, 43%)",
-                by: "hsl(71, 73%, 54%)",
-                lightGray: "hsl(204, 43%, 93%)",
-                dg: "hsl(204, 33%, 83%)",
-                gb: "hsl(218, 22%, 67%)"
-              },
-              fontFamily: {
-                primary: ["Karla", "sans-serif"],
-              },
-              fontSize: {
-                body: "16px",
-              },
-            },
-          },
-        };
-      </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-primary text-white bg-lightGray flex flex-col justify-center items-center py-5 lg:h-[100dvh] ">
-  <main class="container w-[18rem] sm:w-3/6 lg:w-[682px]">
-    <section class="bg-white p-5">
-      <h1 class="text-c font-bold text-4xl py-2 md:px-2">Join our community</h1>
-      <h2 class="text-by text-2xl font-bold py-2 md:px-2">30-day, hassle-free money back guarantee</h2>
-      <p class="text-gb py-2 md:text-xl md:px-2">
+<body>
+  <main>
+    <section id="first">
+      <h1>Join our community</h1>
+      <h2>30-day, hassle-free money back guarantee</h2>
+      <p>
         Gain access to our full library of tutorials along with expert code reviews. 
         Perfect for any developers who are serious about honing their skills.
       </p>
     </section>
-    <div class="lg:grid lg:grid-cols-2">
-      <section class="bg-c p-5"> 
-        <h1 class="text-xl py-2 md:px-2 ">Monthly Subscription</h1>
-        <h2 class="text-4xl py-2 md:px-2 ">&dollar;29 
-          <span class="text-sm text-dg">per month</span>
-        </h2>
-        <p class="text-lightGray pb-5 md:px-2">Full access for less than &dollar;1 a day</p>
-        <button class="bg-by btn-block w-full rounded-[.4rem] p-3">Sign Up</button>
-      </section>
-      <section class="bg-lc p-5">
-        <h1 class="text-2xl py-2 md:px-2">Why Us</h1>   
-        <div class="text-dg py-2 md:px-2">
-          <p>Tutorials by industry experts</p>
-          <p>Peer &amp; expert code review</p>
-          <p>Coding exercises</p>
-          <p>Access to our GitHub repos</p>
-          <p>Community forum</p>
-          <p>Flashcard decks</p>
-          <p>New videos every week</p>
-        </div>
-      </section>
-    </div>
-  </main> 
-  <footer class="attribution text-black text-xl">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-    Frontend Mentor</a>
-    <br>
-    Coded by <a href="https://www.frontendmentor.io/profile/Ganesh-G0" target="_blank">
-    Ganesh</a>
-  </footer>
+    <section id="second">      
+      <h1>Monthly Subscription</h1>
+      <h2><span>&dollar;29 </span>per month</h2>
+      <p>Full access for less than &dollar;1 a day</p>
+      <button>Sign Up</button>
+    </section>
+    <section id="third">
+      <h1>Why Us</h1>   
+      <div>
+        <p>Tutorials by industry experts</p>
+        <p>Peer &amp; expert code review</p>
+        <p>Coding exercises</p>
+        <p>Access to our GitHub repos</p>
+        <p>Community forum</p>
+        <p>Flashcard decks</p>
+        <p>New videos every week</p>
+      </div>
+    </section>    
+  </main>
 </body>
 </html>
